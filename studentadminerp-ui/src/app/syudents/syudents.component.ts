@@ -19,8 +19,8 @@ export class SyudentsComponent implements OnInit {
     'email',
     'mobile',
     'gender',
+    'edit',
   ];
-
   dataSource: MatTableDataSource<Student> = new MatTableDataSource<Student>();
   @ViewChild(MatPaginator) matPaginator!: MatPaginator;
   @ViewChild(MatSort) matSort!: MatSort;
@@ -31,7 +31,7 @@ export class SyudentsComponent implements OnInit {
   ngOnInit(): void {
     //Fetch Students
 
-    this.studentService.getStudent().subscribe({
+    this.studentService.getStudents().subscribe({
       next: (successResponse) => {
         this.students = successResponse;
         this.dataSource = new MatTableDataSource<Student>(this.students);

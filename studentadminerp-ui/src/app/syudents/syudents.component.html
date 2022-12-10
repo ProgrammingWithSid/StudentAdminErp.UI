@@ -9,11 +9,18 @@
     <div class="col-xs-12">
       <input
         type="text"
-        class="search-input"
+        class="searh-input"
         placeholder="Search students"
         [(ngModel)]="filterString"
         (keyup)="filterStudents()"
       />
+      <a
+        routerLink="/students/add"
+        mat-raised-button
+        color="primary"
+        class="ml-1"
+        >Add New Student</a
+      >
     </div>
   </div>
 
@@ -59,6 +66,16 @@
         <th mat-header-cell *matHeaderCellDef>Gender</th>
         <td mat-cell *matCellDef="let element">
           {{ element.gender.description }}
+        </td>
+      </ng-container>
+
+      <!-- Edit Column -->
+      <ng-container matColumnDef="edit">
+        <th mat-header-cell *matHeaderCellDef></th>
+        <td mat-cell *matCellDef="let element">
+          <a [routerLink]="['/students', element.id]">
+            <mat-icon color="primary">edit</mat-icon>
+          </a>
         </td>
       </ng-container>
 
