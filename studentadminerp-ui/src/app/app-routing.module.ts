@@ -1,10 +1,21 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
-const routes: Routes = [];
+import { SyudentsComponent } from './syudents/syudents.component';
+const routes: Routes = [
+  {
+    path: '',
+    component: SyudentsComponent,
+  },
+  {
+    path: 'students',
+    component: SyudentsComponent,
+  },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+  title = 'studentadminerp-ui';
+}
