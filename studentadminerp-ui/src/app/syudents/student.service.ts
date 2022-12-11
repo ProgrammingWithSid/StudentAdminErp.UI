@@ -28,6 +28,7 @@ export class StudentService {
     studentRequest: Student
   ): Observable<Student> {
     const updateStudentRequest: UpdateStudentRequest = {
+      id: studentRequest.id, //to be change
       firstName: studentRequest.firstName,
       lastName: studentRequest.lastName,
       dateOfBirth: studentRequest.dateOfBirth,
@@ -52,6 +53,7 @@ export class StudentService {
 
   addStudent(studentRequest: Student): Observable<Student> {
     const addStudentRequest: AddStudentRequest = {
+      id: studentRequest.id, //to be change
       firstName: studentRequest.firstName,
       lastName: studentRequest.lastName,
       dateOfBirth: studentRequest.dateOfBirth,

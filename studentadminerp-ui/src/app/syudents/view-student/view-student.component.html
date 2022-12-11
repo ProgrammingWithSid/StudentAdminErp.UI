@@ -21,6 +21,20 @@
         <div class="row">
           <div class="col-xs-6">
             <mat-form-field appearance="outline">
+              <mat-label>Roll Number</mat-label>
+              <input
+                type="text"
+                matInput
+                [(ngModel)]="student.id"
+                name="id"
+                required
+              />
+              <mat-error>First Name is a required field</mat-error>
+            </mat-form-field>
+          </div>
+
+          <div class="col-xs-6">
+            <mat-form-field appearance="outline">
               <mat-label>First Name</mat-label>
               <input
                 type="text"

@@ -13,6 +13,7 @@ import { StudentService } from './student.service';
 export class SyudentsComponent implements OnInit {
   students: Student[] = [];
   displayedColumns: string[] = [
+    'id',
     'firstName',
     'lastName',
     'dateOfBirth',
